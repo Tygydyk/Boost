@@ -39,6 +39,14 @@ int main(int argc, char* argv[])
 	{
 		cout << ex.what() << '\n';
 	}
-
+	
+for (const auto &x : report)
+	{
+		for (const auto &y : x.second)
+		{
+			std::cout << "broker:" << x.first << " account:" << y.first << " files:" << y.second.first
+				<< " lastdate:" << y.second.second << std::endl;
+		}
+	}
 	return 0;
 }
